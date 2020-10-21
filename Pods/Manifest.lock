@@ -1,0 +1,16 @@
+PODS:
+  - QBImagePickerController (3.4.0)
+
+DEPENDENCIES:
+  - QBImagePickerController
+
+SPEC REPOS:
+  trunk:
+    - QBImagePickerController
+
+SPEC CHECKSUMS:
+  QBImagePickerController: d54cf93db6decf26baf6ed3472f336ef35cae022
+
+PODFILE CHECKSUM: 170b05663a6fc89e25edd68dfae778a0d6f85068
+
+COCOAPODS: 1.8.4

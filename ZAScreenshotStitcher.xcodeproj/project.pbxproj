@@ -1,0 +1,723 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1BE9074CEE60B7D84C581B3F /* Pods_ZAScreenshotStitcherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E1C1A505E85425EB61C46E /* Pods_ZAScreenshotStitcherTests.framework */; };
+		BB70D532CCC9544264CD12B0 /* Pods_ZAScreenshotStitcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9EC85262C1DF5CB7A4DD24E /* Pods_ZAScreenshotStitcher.framework */; };
+		EC51F4D0230CFC3200943342 /* ZAStitcherManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC51F4CF230CFC3200943342 /* ZAStitcherManager.m */; };
+		EC51F509230D08D700943342 /* UIImage+Rotation.mm in Sources */ = {isa = PBXBuildFile; fileRef = EC51F500230D08D700943342 /* UIImage+Rotation.mm */; };
+		EC51F50A230D08D700943342 /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = EC51F503230D08D700943342 /* UIImage+OpenCV.mm */; };
+		EC51F50B230D08D700943342 /* Stitcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC51F505230D08D700943342 /* Stitcher.cpp */; };
+		EC51F50C230D08D700943342 /* OpenCVStitcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = EC51F508230D08D700943342 /* OpenCVStitcher.mm */; };
+		ECA765F0230BCF3C00D901C2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA765EE230BCF3C00D901C2 /* ViewController.m */; };
+		ECA765F3230BD20700D901C2 /* ZASimpleStitcher.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA765F2230BD20700D901C2 /* ZASimpleStitcher.m */; };
+		ECBF47AB230FE780001C32FC /* ZAScreenshotMerger.m in Sources */ = {isa = PBXBuildFile; fileRef = ECBF47AA230FE780001C32FC /* ZAScreenshotMerger.m */; };
+		ECBF47AE230FEFF4001C32FC /* ZAOverlapArea.m in Sources */ = {isa = PBXBuildFile; fileRef = ECBF47AD230FEFF4001C32FC /* ZAOverlapArea.m */; };
+		ECFB5735230BCC620027DAC8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFB5734230BCC620027DAC8 /* AppDelegate.m */; };
+		ECFB573D230BCC640027DAC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECFB573C230BCC640027DAC8 /* Assets.xcassets */; };
+		ECFB5740230BCC640027DAC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECFB573E230BCC640027DAC8 /* LaunchScreen.storyboard */; };
+		ECFB5743230BCC640027DAC8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFB5742230BCC640027DAC8 /* main.m */; };
+		ECFB574D230BCC640027DAC8 /* ZAScreenshotStitcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFB574C230BCC640027DAC8 /* ZAScreenshotStitcherTests.m */; };
+		ECFB5770230BCCB90027DAC8 /* UIImage+Converter.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFB576A230BCCB90027DAC8 /* UIImage+Converter.m */; };
+		ECFB5773230BCCEF0027DAC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECFB5772230BCCEF0027DAC8 /* Main.storyboard */; };
+		ECFB5777230BCD000027DAC8 /* ImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFB5776230BCD000027DAC8 /* ImageCollectionViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		ECFB577F230BCDD80027DAC8 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = text.plist;
+			inputFiles = (
+			);
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# builtin-copyPlist\n";
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXContainerItemProxy section */
+		ECFB5749230BCC640027DAC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECFB5728230BCC620027DAC8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECFB572F230BCC620027DAC8;
+			remoteInfo = ZAScreenshotStitcher;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0319B56DD69BF681F3127565 /* Pods-ZAScreenshotStitcherTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZAScreenshotStitcherTests.release.xcconfig"; path = "Target Support Files/Pods-ZAScreenshotStitcherTests/Pods-ZAScreenshotStitcherTests.release.xcconfig"; sourceTree = "<group>"; };
+		3D679FEE46C27DB0D605F5D9 /* Pods-ZAScreenshotStitcherTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZAScreenshotStitcherTests.debug.xcconfig"; path = "Target Support Files/Pods-ZAScreenshotStitcherTests/Pods-ZAScreenshotStitcherTests.debug.xcconfig"; sourceTree = "<group>"; };
+		69E1C1A505E85425EB61C46E /* Pods_ZAScreenshotStitcherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZAScreenshotStitcherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95C942A841B9373B6756565E /* Pods-ZAScreenshotStitcher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZAScreenshotStitcher.debug.xcconfig"; path = "Target Support Files/Pods-ZAScreenshotStitcher/Pods-ZAScreenshotStitcher.debug.xcconfig"; sourceTree = "<group>"; };
+		EC51F4CE230CFC3200943342 /* ZAStitcherManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAStitcherManager.h; sourceTree = "<group>"; };
+		EC51F4CF230CFC3200943342 /* ZAStitcherManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAStitcherManager.m; sourceTree = "<group>"; };
+		EC51F500230D08D700943342 /* UIImage+Rotation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+Rotation.mm"; sourceTree = "<group>"; };
+		EC51F501230D08D700943342 /* UIImage+Rotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Rotation.h"; sourceTree = "<group>"; };
+		EC51F502230D08D700943342 /* UIImage+OpenCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+OpenCV.h"; sourceTree = "<group>"; };
+		EC51F503230D08D700943342 /* UIImage+OpenCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+OpenCV.mm"; sourceTree = "<group>"; };
+		EC51F505230D08D700943342 /* Stitcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Stitcher.cpp; sourceTree = "<group>"; };
+		EC51F506230D08D700943342 /* Stitcher.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Stitcher.hpp; sourceTree = "<group>"; };
+		EC51F507230D08D700943342 /* OpenCVStitcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCVStitcher.h; sourceTree = "<group>"; };
+		EC51F508230D08D700943342 /* OpenCVStitcher.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVStitcher.mm; sourceTree = "<group>"; };
+		ECA765EE230BCF3C00D901C2 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		ECA765EF230BCF3C00D901C2 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		ECA765F1230BD20700D901C2 /* ZASimpleStitcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZASimpleStitcher.h; sourceTree = "<group>"; };
+		ECA765F2230BD20700D901C2 /* ZASimpleStitcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZASimpleStitcher.m; sourceTree = "<group>"; };
+		ECBF47A9230FE780001C32FC /* ZAScreenshotMerger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAScreenshotMerger.h; sourceTree = "<group>"; };
+		ECBF47AA230FE780001C32FC /* ZAScreenshotMerger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAScreenshotMerger.m; sourceTree = "<group>"; };
+		ECBF47AC230FEFF4001C32FC /* ZAOverlapArea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAOverlapArea.h; sourceTree = "<group>"; };
+		ECBF47AD230FEFF4001C32FC /* ZAOverlapArea.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAOverlapArea.m; sourceTree = "<group>"; };
+		ECFB5730230BCC620027DAC8 /* ZAScreenshotStitcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZAScreenshotStitcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECFB5733230BCC620027DAC8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		ECFB5734230BCC620027DAC8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		ECFB573C230BCC640027DAC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ECFB573F230BCC640027DAC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ECFB5742230BCC640027DAC8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ECFB5748230BCC640027DAC8 /* ZAScreenshotStitcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZAScreenshotStitcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECFB574C230BCC640027DAC8 /* ZAScreenshotStitcherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAScreenshotStitcherTests.m; sourceTree = "<group>"; };
+		ECFB574E230BCC640027DAC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECFB5757230BCC640027DAC8 /* ZAScreenshotStitcherUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAScreenshotStitcherUITests.m; sourceTree = "<group>"; };
+		ECFB5759230BCC640027DAC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECFB5766230BCCB90027DAC8 /* UIImage+Converter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Converter.h"; sourceTree = "<group>"; };
+		ECFB576A230BCCB90027DAC8 /* UIImage+Converter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Converter.m"; sourceTree = "<group>"; };
+		ECFB5772230BCCEF0027DAC8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		ECFB5775230BCD000027DAC8 /* ImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCollectionViewCell.h; sourceTree = "<group>"; };
+		ECFB5776230BCD000027DAC8 /* ImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCollectionViewCell.m; sourceTree = "<group>"; };
+		ECFB577D230BCD7E0027DAC8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F06DC3E08C8887126BDDD3E4 /* Pods-ZAScreenshotStitcher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZAScreenshotStitcher.release.xcconfig"; path = "Target Support Files/Pods-ZAScreenshotStitcher/Pods-ZAScreenshotStitcher.release.xcconfig"; sourceTree = "<group>"; };
+		F9EC85262C1DF5CB7A4DD24E /* Pods_ZAScreenshotStitcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZAScreenshotStitcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ECFB572D230BCC620027DAC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB70D532CCC9544264CD12B0 /* Pods_ZAScreenshotStitcher.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECFB5745230BCC640027DAC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BE9074CEE60B7D84C581B3F /* Pods_ZAScreenshotStitcherTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C1F65A5F2CCDD3831128A5EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9EC85262C1DF5CB7A4DD24E /* Pods_ZAScreenshotStitcher.framework */,
+				69E1C1A505E85425EB61C46E /* Pods_ZAScreenshotStitcherTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C7AB7F818CE6AE66C0EE6483 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				95C942A841B9373B6756565E /* Pods-ZAScreenshotStitcher.debug.xcconfig */,
+				F06DC3E08C8887126BDDD3E4 /* Pods-ZAScreenshotStitcher.release.xcconfig */,
+				3D679FEE46C27DB0D605F5D9 /* Pods-ZAScreenshotStitcherTests.debug.xcconfig */,
+				0319B56DD69BF681F3127565 /* Pods-ZAScreenshotStitcherTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EC51F4CB230CF27B00943342 /* ImageConverter */ = {
+			isa = PBXGroup;
+			children = (
+				ECFB5766230BCCB90027DAC8 /* UIImage+Converter.h */,
+				ECFB576A230BCCB90027DAC8 /* UIImage+Converter.m */,
+			);
+			path = ImageConverter;
+			sourceTree = "<group>";
+		};
+		EC51F4CC230CF28E00943342 /* Simple Stitcher */ = {
+			isa = PBXGroup;
+			children = (
+				EC51F4CB230CF27B00943342 /* ImageConverter */,
+				ECA765F1230BD20700D901C2 /* ZASimpleStitcher.h */,
+				ECA765F2230BD20700D901C2 /* ZASimpleStitcher.m */,
+				ECBF47A9230FE780001C32FC /* ZAScreenshotMerger.h */,
+				ECBF47AA230FE780001C32FC /* ZAScreenshotMerger.m */,
+				ECBF47AC230FEFF4001C32FC /* ZAOverlapArea.h */,
+				ECBF47AD230FEFF4001C32FC /* ZAOverlapArea.m */,
+			);
+			path = "Simple Stitcher";
+			sourceTree = "<group>";
+		};
+		EC51F4CD230CF2A200943342 /* OpenCV Stitcher */ = {
+			isa = PBXGroup;
+			children = (
+				EC51F4FF230D08D700943342 /* UIImage+ */,
+				EC51F507230D08D700943342 /* OpenCVStitcher.h */,
+				EC51F508230D08D700943342 /* OpenCVStitcher.mm */,
+				EC51F505230D08D700943342 /* Stitcher.cpp */,
+				EC51F506230D08D700943342 /* Stitcher.hpp */,
+			);
+			path = "OpenCV Stitcher";
+			sourceTree = "<group>";
+		};
+		EC51F4FC230D089900943342 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC51F4FF230D08D700943342 /* UIImage+ */ = {
+			isa = PBXGroup;
+			children = (
+				EC51F500230D08D700943342 /* UIImage+Rotation.mm */,
+				EC51F501230D08D700943342 /* UIImage+Rotation.h */,
+				EC51F502230D08D700943342 /* UIImage+OpenCV.h */,
+				EC51F503230D08D700943342 /* UIImage+OpenCV.mm */,
+			);
+			path = "UIImage+";
+			sourceTree = "<group>";
+		};
+		ECA765FD230BED7B00D901C2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ECFB5774230BCD000027DAC8 /* CollectionViewCell */,
+				ECA765EF230BCF3C00D901C2 /* ViewController.h */,
+				ECA765EE230BCF3C00D901C2 /* ViewController.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ECFB5727230BCC620027DAC8 = {
+			isa = PBXGroup;
+			children = (
+				ECFB5732230BCC620027DAC8 /* ZAScreenshotStitcher */,
+				ECFB574B230BCC640027DAC8 /* ZAScreenshotStitcherTests */,
+				ECFB5756230BCC640027DAC8 /* ZAScreenshotStitcherUITests */,
+				ECFB5731230BCC620027DAC8 /* Products */,
+				C7AB7F818CE6AE66C0EE6483 /* Pods */,
+				C1F65A5F2CCDD3831128A5EC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		ECFB5731230BCC620027DAC8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ECFB5730230BCC620027DAC8 /* ZAScreenshotStitcher.app */,
+				ECFB5748230BCC640027DAC8 /* ZAScreenshotStitcherTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ECFB5732230BCC620027DAC8 /* ZAScreenshotStitcher */ = {
+			isa = PBXGroup;
+			children = (
+				ECA765FD230BED7B00D901C2 /* Views */,
+				ECFB5765230BCCB90027DAC8 /* Stitcher Module */,
+				EC51F4FC230D089900943342 /* Frameworks */,
+				ECFB5733230BCC620027DAC8 /* AppDelegate.h */,
+				ECFB5734230BCC620027DAC8 /* AppDelegate.m */,
+				ECFB5772230BCCEF0027DAC8 /* Main.storyboard */,
+				ECFB573C230BCC640027DAC8 /* Assets.xcassets */,
+				ECFB573E230BCC640027DAC8 /* LaunchScreen.storyboard */,
+				ECFB577D230BCD7E0027DAC8 /* Info.plist */,
+				ECFB5742230BCC640027DAC8 /* main.m */,
+			);
+			path = ZAScreenshotStitcher;
+			sourceTree = "<group>";
+		};
+		ECFB574B230BCC640027DAC8 /* ZAScreenshotStitcherTests */ = {
+			isa = PBXGroup;
+			children = (
+				ECFB574C230BCC640027DAC8 /* ZAScreenshotStitcherTests.m */,
+				ECFB574E230BCC640027DAC8 /* Info.plist */,
+			);
+			path = ZAScreenshotStitcherTests;
+			sourceTree = "<group>";
+		};
+		ECFB5756230BCC640027DAC8 /* ZAScreenshotStitcherUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ECFB5757230BCC640027DAC8 /* ZAScreenshotStitcherUITests.m */,
+				ECFB5759230BCC640027DAC8 /* Info.plist */,
+			);
+			path = ZAScreenshotStitcherUITests;
+			sourceTree = "<group>";
+		};
+		ECFB5765230BCCB90027DAC8 /* Stitcher Module */ = {
+			isa = PBXGroup;
+			children = (
+				EC51F4CC230CF28E00943342 /* Simple Stitcher */,
+				EC51F4CD230CF2A200943342 /* OpenCV Stitcher */,
+				EC51F4CE230CFC3200943342 /* ZAStitcherManager.h */,
+				EC51F4CF230CFC3200943342 /* ZAStitcherManager.m */,
+			);
+			path = "Stitcher Module";
+			sourceTree = "<group>";
+		};
+		ECFB5774230BCD000027DAC8 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				ECFB5775230BCD000027DAC8 /* ImageCollectionViewCell.h */,
+				ECFB5776230BCD000027DAC8 /* ImageCollectionViewCell.m */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ECFB572F230BCC620027DAC8 /* ZAScreenshotStitcher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECFB575C230BCC640027DAC8 /* Build configuration list for PBXNativeTarget "ZAScreenshotStitcher" */;
+			buildPhases = (
+				92C3EDCD9FE04D4694A944A4 /* [CP] Check Pods Manifest.lock */,
+				ECFB572C230BCC620027DAC8 /* Sources */,
+				ECFB572D230BCC620027DAC8 /* Frameworks */,
+				ECFB572E230BCC620027DAC8 /* Resources */,
+				9E76269514CD5B57EB09F48B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+				ECFB577F230BCDD80027DAC8 /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = ZAScreenshotStitcher;
+			productName = ZAScreenshotStitcher;
+			productReference = ECFB5730230BCC620027DAC8 /* ZAScreenshotStitcher.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ECFB5747230BCC640027DAC8 /* ZAScreenshotStitcherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECFB575F230BCC640027DAC8 /* Build configuration list for PBXNativeTarget "ZAScreenshotStitcherTests" */;
+			buildPhases = (
+				9027074D2903F12DCEDE6006 /* [CP] Check Pods Manifest.lock */,
+				ECFB5744230BCC640027DAC8 /* Sources */,
+				ECFB5745230BCC640027DAC8 /* Frameworks */,
+				ECFB5746230BCC640027DAC8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECFB574A230BCC640027DAC8 /* PBXTargetDependency */,
+			);
+			name = ZAScreenshotStitcherTests;
+			productName = ZAScreenshotStitcherTests;
+			productReference = ECFB5748230BCC640027DAC8 /* ZAScreenshotStitcherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ECFB5728230BCC620027DAC8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = vng;
+				TargetAttributes = {
+					ECFB572F230BCC620027DAC8 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					ECFB5747230BCC640027DAC8 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = ECFB572F230BCC620027DAC8;
+					};
+				};
+			};
+			buildConfigurationList = ECFB572B230BCC620027DAC8 /* Build configuration list for PBXProject "ZAScreenshotStitcher" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ECFB5727230BCC620027DAC8;
+			productRefGroup = ECFB5731230BCC620027DAC8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ECFB572F230BCC620027DAC8 /* ZAScreenshotStitcher */,
+				ECFB5747230BCC640027DAC8 /* ZAScreenshotStitcherTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ECFB572E230BCC620027DAC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECFB5773230BCCEF0027DAC8 /* Main.storyboard in Resources */,
+				ECFB5740230BCC640027DAC8 /* LaunchScreen.storyboard in Resources */,
+				ECFB573D230BCC640027DAC8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECFB5746230BCC640027DAC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9027074D2903F12DCEDE6006 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZAScreenshotStitcherTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92C3EDCD9FE04D4694A944A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZAScreenshotStitcher-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E76269514CD5B57EB09F48B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZAScreenshotStitcher/Pods-ZAScreenshotStitcher-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZAScreenshotStitcher/Pods-ZAScreenshotStitcher-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZAScreenshotStitcher/Pods-ZAScreenshotStitcher-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ECFB572C230BCC620027DAC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECA765F3230BD20700D901C2 /* ZASimpleStitcher.m in Sources */,
+				ECBF47AB230FE780001C32FC /* ZAScreenshotMerger.m in Sources */,
+				ECA765F0230BCF3C00D901C2 /* ViewController.m in Sources */,
+				ECFB5770230BCCB90027DAC8 /* UIImage+Converter.m in Sources */,
+				EC51F50C230D08D700943342 /* OpenCVStitcher.mm in Sources */,
+				EC51F4D0230CFC3200943342 /* ZAStitcherManager.m in Sources */,
+				EC51F509230D08D700943342 /* UIImage+Rotation.mm in Sources */,
+				ECFB5743230BCC640027DAC8 /* main.m in Sources */,
+				ECFB5777230BCD000027DAC8 /* ImageCollectionViewCell.m in Sources */,
+				ECFB5735230BCC620027DAC8 /* AppDelegate.m in Sources */,
+				ECBF47AE230FEFF4001C32FC /* ZAOverlapArea.m in Sources */,
+				EC51F50A230D08D700943342 /* UIImage+OpenCV.mm in Sources */,
+				EC51F50B230D08D700943342 /* Stitcher.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECFB5744230BCC640027DAC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECFB574D230BCC640027DAC8 /* ZAScreenshotStitcherTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ECFB574A230BCC640027DAC8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECFB572F230BCC620027DAC8 /* ZAScreenshotStitcher */;
+			targetProxy = ECFB5749230BCC640027DAC8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ECFB573E230BCC640027DAC8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECFB573F230BCC640027DAC8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ECFB575A230BCC640027DAC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ECFB575B230BCC640027DAC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ECFB575D230BCC640027DAC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95C942A841B9373B6756565E /* Pods-ZAScreenshotStitcher.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GSDWJHQ3A4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ZAScreenshotStitcher/Frameworks",
+				);
+				INFOPLIST_FILE = ZAScreenshotStitcher/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = duydl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ECFB575E230BCC640027DAC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F06DC3E08C8887126BDDD3E4 /* Pods-ZAScreenshotStitcher.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GSDWJHQ3A4;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ZAScreenshotStitcher/Frameworks",
+				);
+				INFOPLIST_FILE = ZAScreenshotStitcher/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = duydl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		ECFB5760230BCC640027DAC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D679FEE46C27DB0D605F5D9 /* Pods-ZAScreenshotStitcherTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GSDWJHQ3A4;
+				INFOPLIST_FILE = ZAScreenshotStitcherTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vng.ZAScreenshotStitcherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZAScreenshotStitcher.app/ZAScreenshotStitcher";
+			};
+			name = Debug;
+		};
+		ECFB5761230BCC640027DAC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0319B56DD69BF681F3127565 /* Pods-ZAScreenshotStitcherTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GSDWJHQ3A4;
+				INFOPLIST_FILE = ZAScreenshotStitcherTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vng.ZAScreenshotStitcherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZAScreenshotStitcher.app/ZAScreenshotStitcher";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ECFB572B230BCC620027DAC8 /* Build configuration list for PBXProject "ZAScreenshotStitcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECFB575A230BCC640027DAC8 /* Debug */,
+				ECFB575B230BCC640027DAC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECFB575C230BCC640027DAC8 /* Build configuration list for PBXNativeTarget "ZAScreenshotStitcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECFB575D230BCC640027DAC8 /* Debug */,
+				ECFB575E230BCC640027DAC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECFB575F230BCC640027DAC8 /* Build configuration list for PBXNativeTarget "ZAScreenshotStitcherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECFB5760230BCC640027DAC8 /* Debug */,
+				ECFB5761230BCC640027DAC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ECFB5728230BCC620027DAC8 /* Project object */;
+}
