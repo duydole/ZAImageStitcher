@@ -171,13 +171,6 @@
 			path = "OpenCV Stitcher";
 			sourceTree = "<group>";
 		};
-		EC51F4FC230D089900943342 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Frameworks;
-			sourceTree = "<group>";
-		};
 		EC51F4FF230D08D700943342 /* UIImage+ */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,8 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				ECA765FD230BED7B00D901C2 /* Views */,
-				ECFB5765230BCCB90027DAC8 /* Stitcher Module */,
-				EC51F4FC230D089900943342 /* Frameworks */,
+				ECFB5765230BCCB90027DAC8 /* StitcherModule */,
 				ECFB5733230BCC620027DAC8 /* AppDelegate.h */,
 				ECFB5734230BCC620027DAC8 /* AppDelegate.m */,
 				ECFB5772230BCCEF0027DAC8 /* Main.storyboard */,
@@ -255,7 +247,7 @@
 			path = ZAScreenshotStitcherUITests;
 			sourceTree = "<group>";
 		};
-		ECFB5765230BCCB90027DAC8 /* Stitcher Module */ = {
+		ECFB5765230BCCB90027DAC8 /* StitcherModule */ = {
 			isa = PBXGroup;
 			children = (
 				EC51F4CC230CF28E00943342 /* Simple Stitcher */,
@@ -263,7 +255,7 @@
 				EC51F4CE230CFC3200943342 /* ZAStitcherManager.h */,
 				EC51F4CF230CFC3200943342 /* ZAStitcherManager.m */,
 			);
-			path = "Stitcher Module";
+			path = StitcherModule;
 			sourceTree = "<group>";
 		};
 		ECFB5774230BCD000027DAC8 /* CollectionViewCell */ = {

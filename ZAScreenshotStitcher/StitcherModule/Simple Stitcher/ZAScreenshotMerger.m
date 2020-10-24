@@ -48,7 +48,7 @@
 }
 
 // Find best overlap area and store values:
-- (void) findBestOverlapArea {
+- (void)findBestOverlapArea {
     
     // find all overlaps:
     [self findAllOverlapAreas];
@@ -61,7 +61,7 @@
 }
 
 // Find all overlap areas:
-- (void) findAllOverlapAreas {
+- (void)findAllOverlapAreas {
     
     while (!_isValidOverlapInfors && _lowerBound >= MIN_LOWER_BOUND && !_isSameImage) {
         NSLog(@"dld: Stitching with lowerBound: %f, upperBound: %f", _lowerBound, _upperBound);
@@ -79,7 +79,7 @@
     
 }
 
-- (void) calcultateOverlap {
+- (void)calcultateOverlap {
     
     if (_topImage && _botImage) {
         
@@ -149,7 +149,7 @@
 }
 
 // update array of ZAOverlapAreas:
-- (void) addToListInfor:(ZAOverlapArea*)inputInfor {
+- (void)addToListInfor:(ZAOverlapArea*)inputInfor {
     
     BOOL isExisted = false;
     
@@ -184,7 +184,7 @@
     
 }
 
-- (void) selectBestOverlapArea {
+- (void)selectBestOverlapArea {
     
     // for each OverlapArea:
     for (ZAOverlapArea *infor in _ZAOverlapAreas) {
@@ -207,7 +207,7 @@
     }
 }
 
-- (void) checkOrderedOfImages {
+- (void)checkOrderedOfImages {
     
     if (_beginOverlapTopImageRow < _beginOverlapBotImageRow) {
         NSInteger tempIndex = _beginOverlapTopImageRow;
@@ -221,15 +221,15 @@
 }
 
 // approximate 2 rows value:
-- (BOOL) isX:(int64_t)x approximateTo:(int64_t)y {
+- (BOOL)isX:(int64_t)x approximateTo:(int64_t)y {
     return y >= x*_lowerBound && y <= x*_upperBound;
 }
 
-- (BOOL) isIndex:(NSInteger)x approximateIndex:(NSInteger)y {
+- (BOOL)isIndex:(NSInteger)x approximateIndex:(NSInteger)y {
     return x >= y-8 && x <= y +8;
 }
 
-- (void) verifyDetectedOverlapAreas {
+- (void)verifyDetectedOverlapAreas {
     
     NSMutableArray *validOverlapAreas = [[NSMutableArray alloc] init];
     
@@ -252,11 +252,11 @@
     _ZAOverlapAreas = validOverlapAreas;
 }
 
-- (NSInteger) currentDistance {
+- (NSInteger)currentDistance {
     return _beginOverlapTopImageRow - _beginOverlapBotImageRow;
 }
 
-- (NSInteger) sufficientOverlapHeight {
+- (NSInteger)sufficientOverlapHeight {
     return 0.3*_topImage.size.height;   // 30% height of TopImage
 }
 

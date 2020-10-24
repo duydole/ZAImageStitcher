@@ -16,7 +16,7 @@
 @property (nonatomic) IBOutlet UIActivityIndicatorView *indicatorView;
 @property (nonatomic) QBImagePickerController *pickerViewController;
 
-@property NSMutableArray *imageArray;
+@property (strong, nonatomic) NSMutableArray *imageArray;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIImageView *resultImage;
@@ -29,15 +29,13 @@
 
 @implementation ViewController
 
-- (void) viewDidLoad {
+- (void)viewDidLoad {
     
     [super viewDidLoad];
-    
     [self setup];
-    
 }
 
-- (void) setup {
+- (void)setup {
     [self setupIndicator];
     [self setupCollectionView];
     [self setupScrollView];
@@ -49,42 +47,42 @@
     _pickerViewController.maximumNumberOfSelection = 6;
     _pickerViewController.showsNumberOfSelectedAssets = YES;
 
-    _imageArray = [[NSMutableArray alloc] init];
+    _imageArray = [NSMutableArray new];
 }
 
-- (void) setupCollectionView {
+- (void)setupCollectionView {
     _collectionView.dataSource = self;
 }
 
-- (void) setupStitcher {
+- (void)setupStitcher {
     _stitcher = [[ZAStitcherManager alloc] init];
 }
 
-- (void) setupIndicator {
+- (void)setupIndicator {
     self.indicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     self.indicatorView.center = CGPointMake([UIScreen mainScreen].bounds.size.width/2, [UIScreen mainScreen].bounds.size.height/2);
     self.indicatorView.color = [UIColor grayColor];
     [self.view addSubview:self.indicatorView];
 }
 
-- (void) setupScrollView {
+- (void)setupScrollView {
     [_scrollView setMaximumZoomScale:10.0];
     [_scrollView setClipsToBounds:YES];
 }
 
-# pragma mark - hanle actions:
-- (IBAction) tappedOpenGalleryButton:(id)sender {
+#pragma mark - Action
+
+- (IBAction)tappedOpenGalleryButton:(id)sender {
     [self presentViewController:_pickerViewController animated:YES completion:nil];
 }
 
-- (IBAction) tappedClearButton:(id)sender {
+- (IBAction)tappedClearButton:(id)sender {
     [_imageArray removeAllObjects];
     [_collectionView reloadData];
     _resultImage.image = nil;
 }
 
-// START STITCH IMAGES:
-- (IBAction) tappedStitchButton:(id)sender {
+- (IBAction)tappedStitchButton:(id)sender {
 
     _pickerViewController = [QBImagePickerController new];
     _pickerViewController.delegate = self;
@@ -122,12 +120,11 @@
     });
 }
 
-# pragma mark - picker image delegate:
+#pragma mark - Picker image delegate
+
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey,id> *)info {
     [_imageArray addObject:info[UIImagePickerControllerOriginalImage]];
-    
-    //[self dismissViewControllerAnimated:YES completion:nil];
-    
+        
     [_collectionView reloadData];
     _clearButton.enabled = true;
     if (_imageArray.count >= 2) {
@@ -135,7 +132,8 @@
     }
 }
 
-# pragma mark - collectionview datasource:
+#pragma mark - Collectionview datasource
+
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     ImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellId" forIndexPath:indexPath];
     cell.imageView.image = self.imageArray[indexPath.row];
@@ -149,13 +147,16 @@
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
-# pragma mark - Scrollview Delegate
+
+#pragma mark - Scrollview Delegate
+
 - (UIView *) viewForZoomingInScrollView:(UIScrollView *)scrollView {
     return self.resultImage;
 }
 
-# pragma mark - Private methods:
-- (void) alertViewWithCode: (ZAStitchErrorCode) errorCode {
+#pragma mark - Private methods
+
+- (void)alertViewWithCode:(ZAStitchErrorCode) errorCode {
     NSString *alertContent;
     switch (errorCode) {
         case ZAStitchErrorCodeNotOverlap:
@@ -178,7 +179,7 @@
     [self presentViewController:alertView animated:true completion:nil];
 }
 
-- (void) alertSuccess: (float) executionTime {
+- (void)alertSuccess:(float) executionTime {
     NSString *alertContent;
     alertContent = [NSString stringWithFormat:@"Stitched successful %lu images. Execution time: %f (s)",(unsigned long)_imageArray.count,executionTime];
     UIAlertController *alertView = [UIAlertController alertControllerWithTitle:@"Success" message:alertContent preferredStyle:UIAlertControllerStyleAlert];
@@ -187,11 +188,11 @@
     [self presentViewController:alertView animated:true completion:nil];
 }
 
-# pragma mark - QB Image Picker Delegate:
-- (void) qb_imagePickerController:(QBImagePickerController *)imagePickerController didFinishPickingAssets:(NSArray *)assets {
+#pragma mark - QB Image Picker Delegate:
+
+- (void)qb_imagePickerController:(QBImagePickerController *)imagePickerController didFinishPickingAssets:(NSArray *)assets {
     
     PHCachingImageManager *imageManager = [[PHCachingImageManager alloc] init];
-
     for (PHAsset *asset in assets) {
         [imageManager requestImageDataForAsset:asset options:nil resultHandler:^(NSData * _Nullable imageData, NSString * _Nullable dataUTI, UIImageOrientation orientation, NSDictionary * _Nullable info) {
             [self.imageArray addObject:[UIImage imageWithData:imageData]];

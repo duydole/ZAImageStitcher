@@ -14,8 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZAStitcherManager : NSObject
 
-// stitch array of images then return result and error (if any).
-- (void)stitchImages:(NSArray<UIImage*>*)images completion:(void (^)(UIImage* result, NSError *error)) callback;
+- (void)stitchImages:(NSArray<UIImage *> *)images completion:(void (^)(UIImage *result, NSError *error)) callback;
 
 @end
 

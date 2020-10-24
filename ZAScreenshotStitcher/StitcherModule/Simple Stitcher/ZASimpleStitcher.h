@@ -11,15 +11,12 @@
 
 #define IMAGE_STITCHER_DOMAIN @"duydl.stitcher.domain"
 
-// ErrorCode when Stitching:
 typedef NS_ENUM(NSInteger, ZAStitchErrorCode) {
     ZAStitchErrorCodeNotEqualWidth,                     // input images not equal width.
     ZAStitchErrorCodeNotOverlap,                        // input images not overlap
     ZAStitchErrorCodeNotEnoughImages                    // < 2 images
 };
 
-
-// Every Stitcher must implement this protocol.
 @protocol ZAStitcherProtocol <NSObject>
 
 @required
@@ -30,7 +27,7 @@ typedef NS_ENUM(NSInteger, ZAStitchErrorCode) {
  @param botImage Bottom Image
  @param callback return Result and Error
  */
-- (void) stitchTopImage:(UIImage*)topImage withBotImage:(UIImage*)botImage completion:(void (^)(UIImage* result, NSError *error))callback;
+- (void)stitchTopImage:(UIImage *)topImage withBotImage:(UIImage *)botImage completion:(void (^)(UIImage *result, NSError *error))callback;
 
 /**
  Stitch an array of images
@@ -38,8 +35,7 @@ typedef NS_ENUM(NSInteger, ZAStitchErrorCode) {
  @param images input images
  @param callback return Result and Error.
  */
-- (void) stitchImages:(NSArray<UIImage*>*)images completion:(void (^)(UIImage* result, NSError *error)) callback;
-
+- (void)stitchImages:(NSArray<UIImage *> *)images completion:(void (^)(UIImage *result, NSError *error)) callback;
 
 /**
  errorCode when stitching.
@@ -48,10 +44,8 @@ typedef NS_ENUM(NSInteger, ZAStitchErrorCode) {
 
 @end
 
-// Stitcher using Simple Algorithm
 @interface ZASimpleStitcher : NSObject<ZAStitcherProtocol>
 
-// required property:
 @property ZAStitchErrorCode errorCode;
 
 @end

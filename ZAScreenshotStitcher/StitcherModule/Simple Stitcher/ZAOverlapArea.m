@@ -10,7 +10,7 @@
 
 @implementation ZAOverlapArea
 
-- (NSInteger) distance {
+- (NSInteger)distance {
     
     NSInteger distance = _beginOverlapTopImage - _beginOverlapBotImage;
     

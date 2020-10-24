@@ -20,8 +20,7 @@
 
 @implementation ZASimpleStitcher
 
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
     if (self) {
         _listMergeInfors = [[NSMutableArray alloc] init];
@@ -30,7 +29,7 @@
 }
 
 // Stitch array of UIImages:
-- (void) stitchImages:(NSArray<UIImage *> *)images completion:(void (^)(UIImage *, NSError *))callback {
+- (void)stitchImages:(NSArray<UIImage *> *)images completion:(void (^)(UIImage *, NSError *))callback {
     
     if (callback) {
 
@@ -81,13 +80,13 @@
 }
 
 // Stitch 2 images:
-- (void) stitchTopImage:(UIImage *)topImage withBotImage:(UIImage *)botImage completion:(void (^)(UIImage *, NSError *))callback {
+- (void)stitchTopImage:(UIImage *)topImage withBotImage:(UIImage *)botImage completion:(void (^)(UIImage *, NSError *))callback {
     NSArray *images = [NSArray arrayWithObjects:topImage,botImage, nil];
     [self stitchImages:images completion:callback];
 }
 
 // generate image with MergeInfor
-- (UIImage*) generateImageWithMergeInfor:(ZAScreenshotMerger*)mergeInfor {
+- (UIImage *)generateImageWithMergeInfor:(ZAScreenshotMerger*)mergeInfor {
     
     UIImage *result;
     UIImage *topImage = mergeInfor.topImage;
@@ -118,7 +117,7 @@
 }
 
 // check MergeInfor is valid or not
-- (BOOL) isValidMergeInfor:(ZAScreenshotMerger*)mergeInfor {
+- (BOOL)isValidMergeInfor:(ZAScreenshotMerger *)mergeInfor {
     if (mergeInfor.overlapLength <= 0 || mergeInfor.beginOverlapBotImageRow == mergeInfor.beginOverlapTopImageRow) {
         return false;
     }
@@ -126,7 +125,7 @@
 }
 
 // check input images is valid or not
-- (BOOL) isValidImages:(NSArray<UIImage*>*)images {
+- (BOOL)isValidImages:(NSArray<UIImage *> *)images {
     BOOL isValid = false;
     if (images.count >= 2) {
         NSInteger width = images[0].size.width;
@@ -145,7 +144,7 @@
     return isValid;
 }
 
-- (void) calculateMergeInfors {
+- (void)calculateMergeInfors {
     
     // for each pair of images:
     for (int i = 0 ; i < _images.count - 1; i++) {
@@ -156,7 +155,7 @@
     
 }
 
-- (UIImage*) stitch {
+- (UIImage *)stitch {
     
     UIImage *result;
     
